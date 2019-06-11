@@ -1,6 +1,7 @@
 cmake-build-debug
 .idea
 .vscode
+rc
 
 # Object files
 *.o
