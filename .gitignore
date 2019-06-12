@@ -1,9 +1,7 @@
 cmake-build-debug
 .idea
 .vscode
-rc
-simple_calc
-test.c
+test
 
 # Object files
 *.o
