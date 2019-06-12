@@ -1,6 +1,6 @@
 # Rylang interpreter
 
-C++ interpreter that interprets Rylang.
+C interpreter that interprets Rylang.
 
 ```bash
 go build -buildmode=c-shared -o convertPinyin.so convertPinyin.go
