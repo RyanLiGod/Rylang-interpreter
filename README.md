@@ -1,12 +1,12 @@
-# my C interpreter
+# RyLang interpreter
 
-C interpreter that interprets itself.
+C++ interpreter that interprets RyLang.
 
-```c
-gcc -o rc rc.c
-./rc hello.c
-./rc -s hello.c
+```bash
+gcc -o rc rc.cpp
+./rc hello.ry
+./rc -s hello.ry
 
-./rc rc.c hello.c
-./rc rc.c xc.c hello.c
+./rc rc.c hello.ry
+./rc rc.c xc.c hello.ry
 ```
