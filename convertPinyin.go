@@ -3,7 +3,6 @@ package main
 import (
 	"C"
 	"unicode"
-	"fmt"
 
 	"github.com/mozillazg/go-pinyin"
 )
@@ -20,7 +19,6 @@ func convertPinyin(value string) *C.char {
 			convertedCode += ch
 		}
 	}
-	fmt.Println("convertedCode")
 	return C.CString(convertedCode)
 }
 

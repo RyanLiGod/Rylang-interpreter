@@ -130,15 +130,9 @@ int main(int argc, char **argv) {
     printf("%s\n", src);
     int length = strlen(src);
     GoString code = {src, length};
-    GoString codePinyin = convertPinyin(code);
-    char* cCodePinyin = malloc(codePinyin.n + 1);
-    if (!cCodePinyin) { 
-        printf("could not malloc(%d) for source area\n", poolsize);
-        return -1; 
-    }
-    memcpy(cCodePinyin, codePinyin.p, codePinyin.n);
-    cCodePinyin[codePinyin.n] = '\0';
-    printf("%s", cCodePinyin);
+    char* codePinyin = convertPinyin(code);
+    codePinyin[strlen(codePinyin)] = '\0';
+    printf("%s\n", codePinyin);
     close(fd);
 
     // allocate memory for virtual machine
