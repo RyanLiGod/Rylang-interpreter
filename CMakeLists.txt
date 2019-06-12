@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(C_interpreter C)
+project(RyLang)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(C_interpreter rc.c)
+add_executable(RyLang ry.cpp)
