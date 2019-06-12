@@ -3,6 +3,7 @@ cmake-build-debug
 .vscode
 rc
 simple_calc
+test.c
 
 # Object files
 *.o
