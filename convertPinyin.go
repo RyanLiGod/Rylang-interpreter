@@ -11,8 +11,17 @@ import (
 func convertPinyin(value string) *C.char {
 	stringSlice := []rune(value)
 	convertedCode := ""
+	quotationFlag := false
 	for i := 0; i < len(stringSlice); i++ {
 		ch := string(stringSlice[i])
+		if ch == "\"" {
+			quotationFlag = !quotationFlag
+			convertedCode += ch
+			continue
+		} else if quotationFlag == true {
+			convertedCode += ch
+			continue
+		}
 		if unicode.Is(unicode.Scripts["Han"], stringSlice[i]) {
 			convertedCode += pinyin.LazyConvert(ch, nil)[0]
 		} else {
