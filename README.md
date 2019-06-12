@@ -1,14 +1,12 @@
-# RyLang interpreter
+# Rylang interpreter
 
-C++ interpreter that interprets RyLang.
+C++ interpreter that interprets Rylang.
 
 ```bash
-gcc -o ry ry.c
+go build -buildmode=c-shared -o convertPinyin.so convertPinyin.go
+gcc -o ry ry.c convertPinyin.so
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
 ./ry hello.ry
-./ry -s hello.ry
-
-./ry ry.c hello.ry
-./ry ry.c ry.c hello.ry
 ```
 
 ## About
