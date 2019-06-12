@@ -11,6 +11,7 @@ import (
 func convertPinyin(value string) *C.char {
 	stringSlice := []rune(value)
 	convertedCode := ""
+	// Support Chinese words in quotation
 	quotationFlag := false
 	for i := 0; i < len(stringSlice); i++ {
 		ch := string(stringSlice[i])
