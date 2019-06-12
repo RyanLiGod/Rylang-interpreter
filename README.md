@@ -3,10 +3,10 @@
 C++ interpreter that interprets RyLang.
 
 ```bash
-gcc -o rc rc.cpp
-./rc hello.ry
-./rc -s hello.ry
+gcc -o ry ry.c
+./ry hello.ry
+./ry -s hello.ry
 
-./rc rc.c hello.ry
-./rc rc.c xc.c hello.ry
+./ry ry.c hello.ry
+./ry ry.c ry.c hello.ry
 ```
