@@ -84,7 +84,7 @@ int eval() {
         else if (op == MOD) ax = *sp++ % ax;
 
         // build in functions
-        else if (op == EXIT) { printf("exit(%d)", *sp); return *sp;}
+        else if (op == EXIT) { printf("exit(%d)\n", *sp); return *sp;}
         else if (op == OPEN) { ax = open((char *)sp[1], sp[0]); }
         else if (op == CLOS) { ax = close(*sp);}
         else if (op == READ) { ax = read(sp[2], (char *)sp[1], *sp); }
