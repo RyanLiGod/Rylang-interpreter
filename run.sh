@@ -5,7 +5,7 @@ then
     export GOARCH=386
     export CGO_ENABLED=1
     go build -buildmode=c-shared -o convertPinyin.so convertPinyin.go
-    gcc -m32 -o ry ry.c convertPinyin.so
+    gcc -w -m32 -o ry ry.c convertPinyin.so
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
     ./ry hello.ry
     rm -f ry
@@ -16,7 +16,7 @@ elif [ $1 == "64" ]
 then
     # 64bit
     go build -buildmode=c-shared -o convertPinyin.so convertPinyin.go
-    gcc -o ry ry.c convertPinyin.so
+    gcc -w -o ry ry.c convertPinyin.so
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
     ./ry hello.ry
     rm -f ry
