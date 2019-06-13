@@ -1232,7 +1232,7 @@ int main(int argc, char **argv) {
     "字符 其他 枚举 如果 整型 返回 占用空间 当 "
     "打开 读取 关闭 打印 内存分配 内存设置 内存拷贝 退出 空值 主函数"
     */
-    src = "zifu qita meiju ruguo zhengxing fanhui zhanyongkongjian dang "
+    src = "zifu qita meiju ruguo zhengxing fanhui zhanyongkongjian xunhuandang "
           "dakai duqu guanbi dayin neicunfenpei neicunshezhi neicunkaobei tuichu kongzhi zhuhanshu";
 
     // add keywords to symbol table
