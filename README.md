@@ -14,7 +14,7 @@ This project is inspired by [lotabout/write-a-C-interpreter](https://github.com/
 
 ## Rylang
 
-Rylang is a Chinese programming language based on C. The keywords of Rylang are totolly Chinese. But the punctuation marks of Rylang should use English version like C. For example, you should use `(),;` instead of `（），；` , so it will never be a programming language used in practical. Just have fun!
+Rylang is a Chinese programming language based on C. The keywords of Rylang are totolly Chinese. But the punctuation marks of Rylang should use English version like C. That means you should use `(),;` instead of `（），；` , so it will never be a programming language used in practical. Just have fun!
 
 ## Example
 
