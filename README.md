@@ -3,8 +3,8 @@
 C interpreter that interprets Rylang.
 
 ```bash
-go build -buildmode=c-shared -o convertPinyin.so convertPinyin.go
-gcc -o ry ry.c convertPinyin.so
+go build -buildmode=c-shared -o convertCode.so convertCode.go
+gcc -o ry ry.c convertCode.so
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
 ./ry hello.ry
 ```
