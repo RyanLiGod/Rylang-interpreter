@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <memory.h>
 #include <string.h>
-#include "convertPinyin.h"
+#include "convertCode.h"
 #define int long long  // work with 64bit target
 
 int token;            // current token
@@ -1272,7 +1272,7 @@ int main(int argc, char **argv) {
     }
     int length = strlen(src);
     GoString code = {src, length};
-    char* codePinyin = convertPinyin(code);
+    char* codePinyin = convertCode(code);
     codePinyin[strlen(codePinyin)] = 0;
     // printf("%s\n", codePinyin);
     src = codePinyin;

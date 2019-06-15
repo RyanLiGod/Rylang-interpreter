@@ -4,14 +4,13 @@ import (
 	"C"
 	"crypto/md5"
 	"encoding/hex"
-	"fmt"
 	"unicode"
 
 	"github.com/mozillazg/go-pinyin"
 )
 
-//export convertPinyin
-func convertPinyin(value string) *C.char {
+//export convertCode
+func convertCode(value string) *C.char {
 	stringSlice := []rune(value)
 	convertedCode := ""
 	// Support Chinese words in quotation
@@ -30,7 +29,7 @@ func convertPinyin(value string) *C.char {
 			continue
 		}
 
-		if unicode.Is(unicode.Scripts["Han"], stringSlice[i]) {
+		if unicode.Is(unicode.Scripts["Han"], stringSlice[i]) || unicode.IsLetter(stringSlice[i]) || ch == "_" {
 			tempID += ch
 		} else {
 			if tempID != "" {
@@ -47,7 +46,6 @@ func convertPinyin(value string) *C.char {
 			continue
 		}
 	}
-	fmt.Println(convertedCode)
 	return C.CString(convertedCode)
 }
 
