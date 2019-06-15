@@ -33,6 +33,10 @@ func convertCode(value string) *C.char {
 			tempID += ch
 		} else {
 			if tempID != "" {
+				if unicode.IsDigit(stringSlice[i]) {
+					tempID += ch
+					continue
+				}
 				if stringsContains(keywords, tempID) == -1 {
 					convertedCode += "_" + getMD5HashCode(tempID)
 				} else {
@@ -60,9 +64,7 @@ func stringsContains(array []string, val string) (index int) {
 	return
 }
 
-// getMD5HashCode MD5生成哈希值
 func getMD5HashCode(tempID string) string {
-	//创建一个使用MD5校验的hash.Hash接口的对象
 	hash := md5.New()
 	hash.Write([]byte(tempID))
 	bytes := hash.Sum(nil)
