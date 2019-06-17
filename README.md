@@ -28,8 +28,8 @@ Rylang is a Chinese programming language based on C. The keywords of Rylang are 
 | 空值                          | void                       |
 | 枚举 {}                       | enum {}                    |
 | 如果 (Condition) {}           | if (Condition) {}          |
-| 其他{}                        | else{}                     |
-| 占用空间()                    | sizeof()                   |
+| 其他 {}                        | else {}                     |
+| 占用空间 ()                    | sizeof ()                   |
 | 打开 ()                       | open ()                    |
 | 关闭 ()                       | close ()                   |
 | 打印 ()                       | printf ()                  |
