@@ -40,7 +40,7 @@ Rylang is a Chinese programming language based on C. The keywords of Rylang are 
 | 整型 *爱 = 1;                 | int *i = 1;                |
 | 循环当 ( 爱 < 520 ) { 爱++; } | while ( i < 520 ) { i++; } |
 
-Here is a example of Rylang `hello.ry` :
+A example of Rylang `hello.ry` :
 
 ```
 整型 斐波那契 (整型 标记) {
